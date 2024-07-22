@@ -9,5 +9,3 @@ items = {
         "price": 180.50 
     }
 }
-
-items.values()
