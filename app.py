@@ -19,10 +19,12 @@ def create_store():
     )
   for store in stores.values():
     if store_data["name"] == store["name"]:
-      abort(400, message=f"Store already exist.")  
+      abort(400, message=f"Store already exist.") 
+
   store_id = uuid.uuid4().hex
   store = {**store_data, "id": store_id}
   stores[store_id] = store
+  
   return store
 
 @app.get("/store/<string:store_id>")
